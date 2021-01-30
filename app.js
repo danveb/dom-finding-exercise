@@ -7,20 +7,26 @@ document.getElementById('container');
 document.querySelector('#container'); 
 
 // 3 Select all of the list items with a class of “second”.
-document.querySelectorAll('.second'); 
+// --OR
+// -- document.querySelectorAll(".second")
+document.getElementsByClassName('second'); 
+// document.querySelectorAll('.second'); 
 
 // 4 Select a list item with a class of third, but only the list item inside of the ol tag.
 document.querySelector('ol .third'); 
 
 // 5 Give the section with an id of container the text “Hello!”.
 // document.querySelector('#container').innerText = 'Hello!';
+const section = document.getElementById('container'); 
+section.innerText = 'Hello!'; 
 
 // 6 Add the class main to the div with a class of footer.
 // initialize variable and target .footer
 const footerDiv = document.querySelector('.footer'); 
 // add a class 'main' 
 footerDiv.classList.add('main'); 
-// footerDiv; // <div class="footer main"></div> 
+// -- footer.className += "main";
+footerDiv.className += 'main'; 
 
 // 7 Remove the class main on the div with a class of footer. 
 const footDiv = document.querySelector('.footer'); 
@@ -31,7 +37,8 @@ footDiv.classList.remove('main');
 const newLi = document.createElement('li'); 
 
 // 9 Give the li the text “four”. 
-newLi.textContent = 'four'; 
+// -- newLi.innerText = "four"
+newLi.innerText = 'four'; 
 
 // 10 Append the li to the ul element. 
 // initialize variable and target the ul 
